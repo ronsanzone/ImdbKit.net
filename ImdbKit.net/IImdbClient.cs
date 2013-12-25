@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace ImdbKit.net
 {
-    class Program
+    interface IImdbClient
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
