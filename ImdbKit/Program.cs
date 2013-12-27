@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImdbKit.net
+namespace ImdbKit
 {
-    interface IImdbClient
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }

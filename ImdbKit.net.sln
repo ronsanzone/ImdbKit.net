@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImdbKit.net", "ImdbKit.net\ImdbKit.net.csproj", "{B110C743-8487-4528-A257-9A4E9FFA13FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImdbKit", "ImdbKit\ImdbKit.csproj", "{878E7CA3-3041-486E-A29A-55BC016D1218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImdbKit.Test", "ImdbKit.Test\ImdbKit.Test.csproj", "{DAA8AD8E-1A38-4653-83AC-BCE917AD8C67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B110C743-8487-4528-A257-9A4E9FFA13FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B110C743-8487-4528-A257-9A4E9FFA13FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B110C743-8487-4528-A257-9A4E9FFA13FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B110C743-8487-4528-A257-9A4E9FFA13FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{878E7CA3-3041-486E-A29A-55BC016D1218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878E7CA3-3041-486E-A29A-55BC016D1218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878E7CA3-3041-486E-A29A-55BC016D1218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878E7CA3-3041-486E-A29A-55BC016D1218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAA8AD8E-1A38-4653-83AC-BCE917AD8C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAA8AD8E-1A38-4653-83AC-BCE917AD8C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAA8AD8E-1A38-4653-83AC-BCE917AD8C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAA8AD8E-1A38-4653-83AC-BCE917AD8C67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

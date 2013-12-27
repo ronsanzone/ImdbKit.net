@@ -1,0 +1,6 @@
+﻿namespace ImdbKit
+{
+    interface IImdbClient
+    {
+    }
+}
