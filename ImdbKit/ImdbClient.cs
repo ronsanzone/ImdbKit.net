@@ -17,31 +17,44 @@ namespace ImdbKit
         }
     }
 
-    public class ActorJsonResponseProcessor
+    public abstract class JsonResponseProcessor
     {
-        private ActorSearch _actorSearchHolder;
-        private Uri _path;
+        protected IJsonHolder _searchHolder;
+        protected Uri _path;
 
-        public ActorJsonResponseProcessor(string path)
+        protected JsonResponseProcessor()
+        {
+            
+        }
+        protected JsonResponseProcessor(string path)
         {
             _path = new Uri(path);
         }
-
-        protected string retrieveResponse(Uri path)
+        protected string RetrieveResponse(Uri path)
         {
             var retriever = new JsonResponseRetriever(path);
             return retriever.RetrieveResponse();
         }
         public void ProcessResponse()
         {
-            var response = retrieveResponse(_path);
-            _actorSearchHolder = JsonConvert.DeserializeObject<ActorSearch>(response);
-        }
-        public IJsonHolder GetHolder()
-        {
-            return _actorSearchHolder;
+            var response = RetrieveResponse(_path);
+            PopulateHolder(response);
         }
 
+        protected abstract void PopulateHolder(string response);
+    }
+
+    public class ActorJsonResponseProcessor : JsonResponseProcessor
+    {
+        protected override void PopulateHolder(string response)
+        {
+            _searchHolder = JsonConvert.DeserializeObject<ActorSearch>(response);
+        }
+
+        protected ActorSearch GetHolder()
+        {
+            return _searchHolder as ActorSearch;
+        }
     }
 
     public class JsonResponseRetriever
@@ -60,20 +73,6 @@ namespace ImdbKit
             return client.DownloadString(_path);
         }
     }
-    public interface IJsonHolder
-    {
-        
-    }
-    public class ActorSearch : IJsonHolder
-    {
-        public List<Actor> name_approx { get; set; }
-    }
 
-    public class Actor
-    {
-        public string id { get; set; }
-        public string title { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-    }
+
 }
